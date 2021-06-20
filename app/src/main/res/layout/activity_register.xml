@@ -35,19 +35,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <EditText
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:hint="아이디"
-                android:layout_gravity="center"
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:id="@+id/idText"
-                android:drawableStart="@drawable/ic_baseline_person_24"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:layout_marginTop="50dp"
-                android:background="@color/purple_200"/>
 
             <EditText
                 android:layout_width="280dp"
@@ -61,32 +48,33 @@
                 android:drawableStart="@drawable/ic_baseline_email_24"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
                 android:layout_marginTop="50dp"
-                android:background="@color/purple_200"/>
+                android:background="@color/purple_200"
+                android:inputType="textEmailAddress"/>
 
-            <RadioGroup
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/genderGroup"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+<!--            <RadioGroup-->
+<!--                android:layout_width="280dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/genderGroup"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginTop="10dp">-->
 
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="여성"
-                    android:id="@+id/genderWoman"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="남성"
-                    android:id="@+id/genderMan"
-                    android:layout_weight="1" />
+<!--                <RadioButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="여성"-->
+<!--                    android:id="@+id/genderWoman"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:checked="true" />-->
+<!--                <RadioButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="남성"-->
+<!--                    android:id="@+id/genderMan"-->
+<!--                    android:layout_weight="1" />-->
 
 
-            </RadioGroup>
+<!--            </RadioGroup>-->
 
             <EditText
                 android:inputType="textPassword"
@@ -98,6 +86,21 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:id="@+id/passwordText"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:layout_marginTop="10dp"
+                android:background="@color/purple_200"/>
+
+            <EditText
+                android:inputType="textPassword"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호 확인"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:id="@+id/passwordCheckText"
                 android:drawableStart="@drawable/ic_baseline_lock_24"
                 android:drawableLeft="@drawable/ic_baseline_lock_24"
                 android:layout_marginTop="10dp"

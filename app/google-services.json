@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "389153565974",
+    "project_id": "hometraningcheck",
+    "storage_bucket": "hometraningcheck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389153565974:android:f85cac3d1e4e54caad7437",
+        "android_client_info": {
+          "package_name": "com.example.hometraningcheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389153565974-lq53uiceun30gsuj5f73nn04u4tpkb7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Ftni4hORY2Npm2aiOAs_HyGjQnYKe0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389153565974-lq53uiceun30gsuj5f73nn04u4tpkb7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
