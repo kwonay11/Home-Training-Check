@@ -49,19 +49,34 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
+<!--            <EditText-->
+<!--                android:layout_width="280dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="아이디"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:padding="10dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                android:id="@+id/idText"-->
+<!--                android:drawableStart="@drawable/ic_baseline_person_24"-->
+<!--                android:drawableLeft="@drawable/ic_baseline_person_24"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:background="@color/purple_200"/>-->
+
             <EditText
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:hint="아이디"
+                android:hint="이메일"
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:id="@+id/idText"
-                android:drawableStart="@drawable/ic_baseline_person_24"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:id="@+id/emailText"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
                 android:layout_marginTop="50dp"
-                android:background="@color/purple_200"/>
+                android:background="@color/purple_200"
+                android:inputType="textEmailAddress"/>
 
             <EditText
                 android:inputType="textPassword"
@@ -86,7 +101,8 @@
                 android:background="@color/purple_700"
                 android:text="로그인"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:id="@+id/loginButton"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
