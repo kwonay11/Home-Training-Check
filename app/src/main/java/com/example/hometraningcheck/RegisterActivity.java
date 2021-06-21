@@ -18,7 +18,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
-    private static final String TAG = "RegisterActivity";
     private FirebaseAuth mAuth;
 
     @Override
@@ -32,13 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
         findViewById(R.id.registerButton).setOnClickListener(onClickListener);
         findViewById(R.id.gotoLoginButton).setOnClickListener(onClickListener);
     }
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//
-//    }
 
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override

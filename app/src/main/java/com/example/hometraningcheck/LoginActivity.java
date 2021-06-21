@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String TAG = "RegisterActivity";
     private FirebaseAuth mAuth;
 
     @Override
@@ -31,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.loginButton).setOnClickListener(onClickListener);
+        findViewById(R.id.gotoPasswordButton).setOnClickListener(onClickListener);
 
         TextView registerButton = (TextView) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener(){
@@ -42,13 +42,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-    }
 
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
@@ -56,6 +49,9 @@ public class LoginActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.loginButton:
                     Login();
+                    break;
+                case R.id.gotoPasswordButton:
+                    myStartActivity(PasswordResetActivity.class);
                     break;
 
             }
@@ -74,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startTost("로그인 성공");
-                                startloginActivity(); //메인으로 이동
+                                myStartActivity(MainActivity.class); //메인으로 이동
                             } else {
                                 // If sign in fails, display a message to the user.
                                 if(task.getException()!= null){
@@ -98,10 +94,9 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 
     }
-    private void startloginActivity(){
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //로그인하면 전에 했던 엑티비티 삭제
-        //로그인후에 메인에서 로그아웃하면 앱을 나가게 됨
+    private void myStartActivity(Class c){
+        Intent intent = new Intent(this,c);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //전에 했던 엑티비티 삭제
         startActivity(intent);
     }
 
