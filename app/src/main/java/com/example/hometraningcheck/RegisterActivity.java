@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
                     break;
 
                 case R.id.gotoLoginButton: //회원가입에서 로그인버튼 눌렀을 때  로그인으로 감
-                    startLoginActivity();
+                    startLoginActivity(LoginActivity.class);
                     break;
             }
         }
@@ -65,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     //성공했을 때 UI로직
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startTost("회원가입에 성공했습니다.");
+                                    finish();//로그인은 끝냄
 
                                 } else {
                                     // 실패했을 때 에러 내용 띄움
@@ -86,12 +87,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
     private void startTost(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-
-    }
-    private void startLoginActivity(){
-        Intent intent = new Intent(this,LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//회원가입 후에 로그인 버튼 누르면 쌓인 액티비티 삭제함
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show(); }
+    private void startLoginActivity(Class c){
+        Intent intent = new Intent(this,c);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //전에 했던 엑티비티 삭제
         startActivity(intent);
     }
 

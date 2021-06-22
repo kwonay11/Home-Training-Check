@@ -32,26 +32,21 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.loginButton).setOnClickListener(onClickListener);
         findViewById(R.id.gotoPasswordButton).setOnClickListener(onClickListener);
 
-        TextView registerButton = (TextView) findViewById(R.id.registerButton);
-        registerButton.setOnClickListener(new View.OnClickListener(){
-            //  회원가입 버튼 눌렀을 때 로그인으로 오기
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(registerIntent);
-            }
-        });
+        findViewById(R.id.registerButton).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
             switch (v.getId()){
-                case R.id.loginButton:
+                case R.id.loginButton: //로그인 엑티비티로 보내기
                     Login();
                     break;
-                case R.id.gotoPasswordButton:
+                case R.id.gotoPasswordButton: //비밀번호 변경 엑티비티로 보내기
                     myStartActivity(PasswordResetActivity.class);
+                    break;
+                case R.id.registerButton: //회원가입액티비티로 보내기
+                    myStartActivity(RegisterActivity.class);
                     break;
 
             }
