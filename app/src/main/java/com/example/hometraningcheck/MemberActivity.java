@@ -55,7 +55,7 @@ public class MemberActivity extends AppCompatActivity {
         // 유저 이름 받아서
         String name = ((EditText)findViewById(R.id.nameText)).getText().toString();
         String recentWeight = ((EditText)findViewById(R.id.recentWeightText)).getText().toString();
-        String wishWeight = ((EditText)findViewById(R.id.wishtWeightText)).getText().toString();
+        String wishWeight = ((EditText)findViewById(R.id.wishWeightText)).getText().toString();
         String wishDate = ((EditText)findViewById(R.id.wishtDateText)).getText().toString();
 
 
@@ -70,7 +70,7 @@ public class MemberActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 startTost("회원 정보 등록에 성공하였습니다.");
-                                finish(); //등록하면 화면 꺼지기
+//                                finish(); //등록하면 화면 나가기
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

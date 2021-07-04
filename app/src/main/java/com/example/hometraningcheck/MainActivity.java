@@ -58,7 +58,10 @@ public class MainActivity extends AppCompatActivity {
         });
 //메뉴 슬라이드 끝
 
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        //myPage버튼을 눌렀을 때 이동하기
 
         if(user == null){
             //확인된 유저가 없으면 회원가입으로 넘어감
@@ -96,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
+        findViewById(R.id.myPage).setOnClickListener(onClickListener);
 
     }
     View.OnClickListener onClickListener = new View.OnClickListener(){
@@ -105,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.logoutButton: //로그아웃하면 로그인화면으로 넘어감
                     FirebaseAuth.getInstance().signOut();
                     myStartActivity(LoginActivity.class);
-
+                    break;
+                case R.id.myPage: //로그인 엑티비티로 보내기
+                    myStartActivity(MemberActivity.class);
                     break;
 
             }

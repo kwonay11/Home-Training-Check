@@ -24,10 +24,8 @@ public class MemberInfo {
     public String getRecentWeight(){
         return this.recentWeight;
     }
-    public void  setRecentWeight(){
-        this.recentWeight = recentWeight;
-    }
-    public String getWishWeight(String wishWeight){
+    public void  setRecentWeight(String recentWeight){ this.recentWeight = recentWeight; }
+    public String getWishWeight(){
         return this.wishWeight;
     }
     public void  setWishWeight(String wishWeight){
